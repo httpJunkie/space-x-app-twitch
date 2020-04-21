@@ -8,7 +8,7 @@ import { AppProvider } from './context/AppContext';
 import Frame from './Frame';
 
 const App = () => {
-  return(
+  return (
     <AppProvider>
       <Frame />
     </AppProvider>

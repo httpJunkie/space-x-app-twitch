@@ -10,7 +10,7 @@ const AppProvider = props => {
       { ...data, navOpen: value }
     ))
   });
-  
+
   return <AppContext.Provider value={appData}>{props.children}</AppContext.Provider>
 }
 

@@ -14,33 +14,33 @@ import Topnav from './partial-comonents/Topnav'
 import Logo from './partial-comonents/Logo'
 
 const Frame = () => {
-const isMedium = useMediaPredicate("(min-width: 600px)")
-const breakpoint = isMedium ? "medium" : "small"
+  const isMedium = useMediaPredicate("(min-width: 600px)")
+  const breakpoint = isMedium ? "medium" : "small"
 
-    return (
-        <BrowserRouter>
-            <div className={`app-container ${breakpoint}`}>
-                <main>
-                    <header>
-                        <Logo />
-                        <Topnav /> 
-                    </header>
-                    <section>
-                        <Switch>
-                            <Suspense fallback={<LoadingMessage />}>
-                                <Route exact path="/" component={Home}/>
-                                <Route exact path="/events" component={Events}/>
-                            </Suspense>
-                        </Switch>
-                    </section>
-                    <footer>
-                        <Foot />
-                    </footer>
-                </main>
-                <Sidenav />
-            </div>
-        </BrowserRouter>
-    )
+  return (
+    <BrowserRouter>
+      <div className={`app-container ${breakpoint}`}>
+        <main>
+          <header>
+            <Logo />
+            <Topnav />
+          </header>
+          <section>
+            <Switch>
+              <Suspense fallback={<LoadingMessage />}>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/events" component={Events} />
+              </Suspense>
+            </Switch>
+          </section>
+          <footer>
+            <Foot />
+          </footer>
+        </main>
+        <Sidenav />
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default Frame

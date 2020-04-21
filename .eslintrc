@@ -1,32 +1,38 @@
 {
-    "plugins": [
-      "react",
-      "react-hooks"
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-no-duplicate-props": "error",
+    "semi": [
+      "error",
+      "always"
     ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "env": {
-      "es6": true,
-      "browser": true,
-      "node": true
-    },
-    "extends": [],
-    "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-no-duplicate-props": "error",
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
-    },
-    "settings": {
-      "react": {
-        "version": "16.13"
-      }
+    "quotes": [
+      "error",
+      "double"
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.13"
     }
   }
+}
